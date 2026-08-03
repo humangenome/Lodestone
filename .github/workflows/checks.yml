@@ -34,50 +34,49 @@ jobs:
             echo "::endgroup::"
           done
 
-      - name: README links resolve
+      # HTML comments are stripped first. The README parks a commented-out
+      # <img> as the slot for the app screenshot, and a naive grep reads that
+      # as a broken image.
+      - name: README links and images resolve
         run: |
-          set -uo pipefail
-          fail=0
-          # Relative targets must exist on disk.
-          grep -oE '\]\([^)#][^)]*\)' README.md | tr -d '()]' | while read -r t; do :; done
-          for t in $(grep -oE '\]\(([^)]+)\)' README.md | sed -E 's/^\]\(//; s/\)$//'); do
-            case "$t" in
-              \#*) continue ;;
-              http*)
-                code=$(curl -s -o /dev/null -w '%{http_code}' -L --max-time 25 "$t" || echo 000)
-                # GitHub returns 404 for a releases/latest with no releases yet.
-                if [ "$code" != "200" ] && [ "$code" != "429" ]; then
-                  echo "::warning::HTTP $code for $t"
-                fi
-                ;;
-              *)
-                target=${t%%#*}
-                [ -z "$target" ] && continue
-                if [ ! -e "$target" ]; then
-                  echo "::error::README links $t but it does not exist in the repo"
-                  fail=1
-                fi
-                ;;
-            esac
-          done
-          exit $fail
+          python3 - <<'PY'
+          import os, re, subprocess, sys
 
-      - name: README images exist
-        run: |
-          set -euo pipefail
-          fail=0
-          for img in $(grep -oE 'src="[^"]+"' README.md | sed -E 's/^src="//; s/"$//'); do
-            case "$img" in
-              http*) continue ;;
-            esac
-            if [ ! -f "$img" ]; then
-              echo "::error::README references image $img which is not in the repo"
-              fail=1
-            else
-              echo "OK $img"
-            fi
-          done
-          exit $fail
+          src = open("README.md", encoding="utf-8").read()
+          body = re.sub(r"<!--.*?-->", "", src, flags=re.S)
+          fail = False
+
+          for img in re.findall(r'src="([^"]+)"', body):
+              if img.startswith("http"):
+                  continue
+              if os.path.isfile(img):
+                  print(f"OK image {img}")
+              else:
+                  print(f"::error::README references image {img} which is not in the repo")
+                  fail = True
+
+          for href in re.findall(r"\]\(([^)]+)\)", body):
+              if href.startswith("#"):
+                  continue
+              if href.startswith("http"):
+                  code = subprocess.run(
+                      ["curl", "-s", "-o", os.devnull, "-w", "%{http_code}",
+                       "-L", "--max-time", "25", href],
+                      capture_output=True, text=True).stdout.strip()
+                  # A releases/latest link 404s until the first release exists,
+                  # so an unreachable link here is a warning, not a gate.
+                  if code != "200":
+                      print(f"::warning::HTTP {code} for {href}")
+                  else:
+                      print(f"OK link {href}")
+                  continue
+              target = href.split("#")[0]
+              if target and not os.path.exists(target):
+                  print(f"::error::README links {href} but it does not exist in the repo")
+                  fail = True
+
+          sys.exit(1 if fail else 0)
+          PY
 
       - name: Shell scripts parse clean
         run: |
