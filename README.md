@@ -31,8 +31,8 @@ clock, and saves as it goes. Your group joins whenever they want, in any order, 
 anyone up first.
 
 <p align="center">
-  <img src="docs/img/in-game.png" alt="A Delverium world running on a Lodestone server, with in-game chat and a server broadcast" width="820">
-  <br><sub><em>A live Lodestone server: players in a shared world, in-game chat, and a broadcast sent from outside the game.</em></sub>
+  <img src="docs/img/in-game.png" alt="Two players standing in a shared Delverium world hosted on a Lodestone server" width="820">
+  <br><sub><em>A Delverium world running on a Lodestone server — every player joined from their own machine, and nobody is hosting.</em></sub>
 </p>
 
 ---
@@ -43,6 +43,20 @@ anyone up first.
 It runs on the server, not on somebody's gaming PC. Play at 3am on a Tuesday without rounding
 anyone up or waiting for the host to wake up.
 
+### A live map in your browser
+Watch the world from a web page: terrain, landmarks and where everyone is, refreshed as things
+change. Handy for finding each other, and for seeing what the group built while you were away.
+
+<p align="center">
+  <img src="docs/img/live-map.png" alt="The Lodestone live map rendering a Delverium world with the game's own terrain art" width="820">
+  <br><sub><em>The live map, drawn with the game's own terrain art, served straight from the running server.</em></sub>
+</p>
+
+### Talk in game
+Chat opens on <b>T</b>, inside Delverium itself — the game has no chat of its own. The server
+can post to it too, so a scheduled restart or a heads-up lands where people are actually
+looking.
+
 ### <a id="the-whole-group-fits"></a>The whole group fits
 Up to eight players, the same as Delverium's own co-op limit. You are not trading players away to
 get persistence.
@@ -51,27 +65,13 @@ get persistence.
 Characters belong to the player and travel between servers. The world belongs to the server and
 stays where it is.
 
-### Talk in game
-Chat works inside Delverium itself, and the server can post to it — so a scheduled restart or a
-heads-up lands where people are actually looking.
-
-### A live map in your browser
-Watch the world from a web page: terrain, landmarks and where everyone is, refreshed as things
-change. Handy for finding each other, and for seeing what the group built while you were away.
-
 ### Run it from anywhere
 Roster, console, kick and ban, save, restart — all reachable without logging into the machine
 itself.
 
 ### Light on hardware
-No graphics card, no monitor, no desktop session. It is happy on a spare box or a small rented
-one.
-
-<!-- Add the Lodestone app capture here once the branded build is shot:
-     <p align="center">
-       <img src="docs/img/launcher.png" alt="The Lodestone app showing a saved Delverium server" width="820">
-     </p>
-     Must be a real capture of the shipped build, and must not show an internal test server name. -->
+No graphics card, no monitor, no desktop session. The install is around 330 MB, and an idle
+world costs a few percent of one CPU core — it is happy on a spare box or a small rented one.
 
 ---
 
@@ -82,10 +82,15 @@ Three pieces, and you only ever touch the middle one.
 **The server** holds the world, keeps it saved, and answers to the group's admin tools.
 
 **The Lodestone app** is a small Windows app you run instead of launching Delverium yourself.
-Save a server address once, pick your character, hit Connect.
+Save a server address once; after that it is one click to see who is on and one more to join.
 
 **Your copy of Delverium** is bought and updated from Steam exactly as normal. Lodestone does not
 replace it and does not ship any part of it.
+
+<p align="center">
+  <img src="docs/img/launcher.png" alt="The Lodestone app showing saved servers, who is online, and a Connect button" width="820">
+  <br><sub><em>The Lodestone app: your saved servers, who is online right now, and a Connect button.</em></sub>
+</p>
 
 > **Every player needs the Lodestone app.** Delverium has no way to reach a server like this on
 > its own, so the app is how anyone gets in — including you. It is a one-time install per person,
@@ -106,15 +111,19 @@ panel gives your players a ready-made connect link.
 
 Downloads and setup instructions live in
 [LodestoneServer](https://github.com/HumanGenome/LodestoneServer). You will need a Windows
-machine, a copy of Delverium's files on it, and a couple of open ports.
+machine, a copy of Delverium's files on it, and a couple of open ports. If something is wrong —
+a missing file, a port already taken — the server refuses to start and tells you why, rather
+than running broken.
 
 ### Joining as a player
 
 1. Install the Lodestone app.
 2. Paste in the server address your host gave you.
-3. Pick a character and click Connect.
+3. Click Connect. The app readies Delverium and takes you in; characters are made in the game,
+   the same as always.
 
-The app remembers your servers and your characters between sessions.
+The app remembers your servers, shows who is online before you join, and warns you if a server
+needs a password.
 
 ---
 
