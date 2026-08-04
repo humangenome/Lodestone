@@ -57,6 +57,11 @@ Chat opens on <b>T</b>, inside Delverium itself — the game has no chat of its 
 can post to it too, so a scheduled restart or a heads-up lands where people are actually
 looking.
 
+<p align="center">
+  <img src="docs/img/chat.png" alt="In-game chat on a Lodestone server: player messages and a server broadcast in the bottom-left feed" width="820">
+  <br><sub><em>Players talking in game, with a server broadcast landing in the same feed.</em></sub>
+</p>
+
 ### <a id="the-whole-group-fits"></a>The whole group fits
 Up to eight players, the same as Delverium's own co-op limit. You are not trading players away to
 get persistence.
