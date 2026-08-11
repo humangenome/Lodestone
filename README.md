@@ -82,8 +82,7 @@ This repo publishes the player side:
 The server package for hosts lives on the [LodestoneServer release page](https://github.com/HumanGenome/LodestoneServer/releases/latest), and the public changelog for both sides is [LodestoneServer's CHANGELOG.md](https://github.com/HumanGenome/LodestoneServer/blob/main/CHANGELOG.md).
 
 <p align="center">
-  <em>Lodestone is in development for Delverium's Early Access launch on 22 September 2026.<br>
-  There are no public downloads yet; releases will appear here.</em>
+  <em>Lodestone is in development for Delverium's Early Access launch on 22 September 2026.</em>
 </p>
 
 ## Source
