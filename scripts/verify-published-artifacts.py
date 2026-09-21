@@ -29,31 +29,33 @@ SKIP_PREFIXES = [
 ]
 REPO_RULES = {
     "entry_deny": [
+
         {
             "id": "CAULDRON-STEAMEMU",
             "re": "(?i)(goldberg|gbe_fork|steam_api64|steam_settings|steam_interfaces|steamemu|coldclientloader)",
-            "desc": "Steam emulator / headless-auth recipe (RULE #21e)"
+            "desc": "third-party Steam emulator files must never ship"
         },
         {
             "id": "CAULDRON-HOSTPREP",
             "re": "(?i)(Cauldron\\.HostPrep|SteamEosHostLaunchPrep)",
-            "desc": "private Cauldron host-launch-prep implementation (RULE #21e)"
+            "desc": "another product's private host implementation must never ship"
         },
         {
             "id": "LANTERN-HOSTPATCH-SRC",
             "re": "(?i)LanternHostPatch[^/]*\\.(cpp|cxx|cc|h|hpp|hxx|lib|exp|pdb)$",
-            "desc": "LanternHostPatch source/link artifact (RULE #21c: compiled binary only)"
+            "desc": "another product's private patch sources must never ship"
         },
         {
             "id": "LANTERN-NETPATCH-SRC",
             "re": "(?i)LanternClientNetPatch[^/]*\\.(cpp|cxx|cc|h|hpp|hxx|lib|exp|pdb)$",
-            "desc": "LanternClientNetPatch source/link artifact (RULE #21c)"
+            "desc": "another product's private patch sources must never ship"
         }
     ],
+
     "token_deny": [
         {
             "id": "CAULDRON-EMU-TEXT",
-            "desc": "Steam emulator / headless-auth technique named in a shipped file (RULE #21e)",
+            "desc": "third-party Steam emulator named in a shipped file",
             "tokens": [
                 "Goldberg",
                 "goldberg",
@@ -66,7 +68,7 @@ REPO_RULES = {
         },
         {
             "id": "LANTERN-MECHANISM-TEXT",
-            "desc": "Lantern admission-bypass mechanism named in a shipped file (RULE #21c)",
+            "desc": "another product's private mechanism named in a shipped file",
             "tokens": [
                 "ForceAdmit",
                 "force-admit",
