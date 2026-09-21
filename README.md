@@ -33,7 +33,7 @@ The world is created, saved and kept on the server. One of you mines at noon, an
 Every Lodestone server draws its world in a browser from the game's own terrain art, redrawn as players mine, build and explore. Every connected player is marked where they stand, the teleporters are marked, and the server keeps a timelapse of how the world changed.
 
 <p align="center">
-  <img src="docs/img/live-map.png" alt="The Lodestone live map: a Delverium world drawn with the game's own terrain art" width="860">
+  <img src="docs/img/live-map.png" alt="A Lodestone server's live map page: the whole world drawn from the game's terrain art, a player's live position, and the area selector" width="860">
 </p>
 
 ### 💬 In-game chat
