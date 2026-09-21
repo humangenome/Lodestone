@@ -17,7 +17,7 @@ Delverium has no dedicated server. Its online co-op is a session hosted from one
 Every player must install Lodestone to join a Lodestone server. Stock Delverium cannot connect to a Lodestone server directly.
 
 <p align="center">
-  <img src="docs/img/launcher.png" alt="The Lodestone app: saved servers with their status and player counts, the selected server's roster, and the Connect button" width="860">
+  <img src="docs/img/launcher.png" alt="The Lodestone app: a saved server with its status, ping and player count, and who is on it right now" width="860">
 </p>
 
 ## Features
