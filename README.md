@@ -55,6 +55,10 @@ Set one on the server and only players who enter it in the app get in.
 ### 🖥️ Console in the app
 The Console tab talks to the server's admin port once the admin password is set: who is online, kick, ban, save, restart, and a broadcast into the in-game chat.
 
+<p align="center">
+  <img src="docs/img/launcher-console.png" alt="The app's Console tab connected to a server, with the players and status commands answered" width="860">
+</p>
+
 ### 🛠️ Admin tools for hosts
 Source RCON and a signed HTTP API on the server, a live roster file for panels and bots, a ban list that survives restarts, and a boot report that says in plain words why a server did not start. Details in [LodestoneServer](https://github.com/HumanGenome/LodestoneServer).
 
