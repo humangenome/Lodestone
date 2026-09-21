@@ -22,15 +22,15 @@ Every player must install Lodestone to join a Lodestone server. Stock Delverium 
 
 ## Features
 
-### 🌙 Your world never sleeps
-The world is created, saved and kept on the server. One of you mines at noon, another builds at midnight, and the same world is waiting for both. When the last player logs off, the server keeps running and keeps saving.
+### 🌙 Always running
+The server creates the world and saves it. It keeps running after the last player logs off, so your group can play at different times on the same world.
 
 <p align="center">
   <img src="docs/img/in-game.png" alt="Two players together in a Delverium world hosted on a Lodestone server" width="860">
 </p>
 
 ### 🗺️ Live world map
-Every Lodestone server draws its world in a browser from the game's own terrain art, redrawn as players mine, build and explore. Every connected player is marked where they stand, the teleporters are marked, and the server keeps a timelapse of how the world changed.
+Every Lodestone server has a map page you open in a browser. It draws the world from the game's own ground art, one level at a time, and redraws it as players mine and build. It marks each connected player and every teleporter, and keeps a timelapse of how the world changed.
 
 <p align="center">
   <img src="docs/img/live-map.png" alt="A Lodestone server's live map page: the whole world drawn from the game's terrain art, a player's live position, and the area selector" width="860">
