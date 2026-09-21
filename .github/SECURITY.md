@@ -2,7 +2,7 @@
 
 ## Reporting a vulnerability
 
-If you have found a security issue in Lodestone — the app, the server, or the mods either one loads — please **do not** open a public GitHub issue.
+If you have found a security issue in Lodestone (the app, the server, or the mods either one loads), please **do not** open a public GitHub issue.
 
 Report it privately through GitHub's security advisory form:
 
@@ -34,8 +34,8 @@ In scope:
 
 Out of scope:
 
-- Vulnerabilities in the machine your server runs on — those belong to whoever operates it
-- Vulnerabilities in retail Delverium itself — report those to the game's developer
+- Vulnerabilities in the machine your server runs on: those belong to whoever operates it
+- Vulnerabilities in retail Delverium itself: report those to the game's developer
 - Vulnerabilities in third-party mods running alongside Lodestone
 - Cheating and anti-cheat concerns; Lodestone does not provide anti-cheat
 - Denial of service by simply sending a server more traffic than its link can carry

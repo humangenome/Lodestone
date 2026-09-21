@@ -6,8 +6,8 @@ Short and to the point.
 
 | You are looking at | File it here |
 |---|---|
-| The Lodestone app — installing, connecting, the server list, updates | [HumanGenome/Lodestone](https://github.com/HumanGenome/Lodestone/issues) |
-| A running server — startup, world saving, ports, server query | [HumanGenome/LodestoneServer](https://github.com/HumanGenome/LodestoneServer/issues) |
+| The Lodestone app: installing, connecting, the server list, updates | [HumanGenome/Lodestone](https://github.com/HumanGenome/Lodestone/issues) |
+| A running server: startup, world saving, ports, server query | [HumanGenome/LodestoneServer](https://github.com/HumanGenome/LodestoneServer/issues) |
 | Not sure | Here. It gets moved. |
 
 ## Reporting bugs
@@ -20,7 +20,7 @@ Open an issue using the **Bug report** template. Include:
 - The app log, and the server log if you host the server
 - Whether anyone else can reproduce it on a clean server
 
-If your issue is about managed hosting you bought — the control panel, billing, or support — contact your host directly. Lodestone's GitHub issues are for the open-source app, server, and mods themselves.
+If your issue is about managed hosting you bought (the control panel, billing or support), contact your host directly. Lodestone's GitHub issues are for the open-source app, server, and mods themselves.
 
 ## Feature requests
 
