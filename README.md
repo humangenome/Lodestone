@@ -59,8 +59,11 @@ The Console tab talks to the server's admin port once the admin password is set:
   <img src="docs/img/launcher-console.png" alt="The app's Console tab connected to a server, with the players and status commands answered" width="860">
 </p>
 
+### 💾 World backups
+The app's World window backs up the running world, downloads a backup and puts one back. It can also bring in a world from your own single-player game: the server backs up the world it was running, restarts, and loads yours. Like the Console tab, it needs the server's admin password.
+
 ### 🛠️ Admin tools for hosts
-Source RCON and a signed HTTP API on the server, a live roster file for panels and bots, a ban list that survives restarts, and a boot report that says in plain words why a server did not start. Details in [LodestoneServer](https://github.com/HumanGenome/LodestoneServer).
+Source RCON and a signed HTTP API on the server, a live roster file for panels and bots, a ban list and an allow list that survive restarts, and a boot report that says in plain words why a server did not start. Details in [LodestoneServer](https://github.com/HumanGenome/LodestoneServer).
 
 ### 📡 Server query
 The server answers Source A2S on the port above the gameplay port with its status and real player count, so monitoring tools and hosting panels can read it.
@@ -108,7 +111,10 @@ On your PC, where Delverium keeps it. The server holds the world.
 Delverium's Online menu lists your Steam friends. On a PC with Lodestone installed, the server you last connected to appears in that menu as well.
 
 ### Can a world move between servers?
-Yes. The world save is a file on the server; copy it to the other server.
+Yes. Download a backup in the app's World window, then pick that zip with **Choose a world** on the other server. The world save is also a plain file on the server, so you can copy it across yourself.
+
+### Can I bring my single-player world?
+Yes. **Choose a world** in the World window opens your own saves; pick the world and the server restarts onto it. The world keeps the size it was made with.
 
 ### Is this official?
 No. Lodestone is an independent project. Sagestone Games does not ship dedicated servers for Delverium.
