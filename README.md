@@ -76,7 +76,7 @@ Starting Delverium from Steam after a Lodestone session runs the normal game. Yo
 
 ## Install
 
-### Managed hosting
+### Rent a server
 [SurvivalServers.com Delverium server hosting](https://www.survivalservers.com/services/game_servers/delverium/?utm_source=github&utm_medium=readme_install&utm_campaign=lodestone) comes with Lodestone installed and kept up to date, the ports open, and a control panel with the live map, the console and one-click restores.
 
 ### Players
