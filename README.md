@@ -16,34 +16,38 @@ Delverium has no dedicated server. Its online co-op is a session hosted from one
 
 Every player must install Lodestone to join a Lodestone server. Stock Delverium cannot connect to a Lodestone server directly.
 
-## Features
-
-### 🧭 Join by address
-Add the server's `ip:port` in the app, pick a character and click Connect. The app puts the connection files next to your game, starts Delverium and joins the server. The app shows whether the server is up, who is online and your ping before you connect.
-
 <p align="center">
   <img src="docs/img/app-v0.2.6-servers.png" alt="The Lodestone app with a saved server online: its build, ping, 2 of 8 players and who is on it, with the World, Characters and Connect buttons" width="860">
 </p>
 
-### 🌙 Always running
-The server creates the world and saves it. It keeps running after the last player logs off, so your group can play at different times on the same world.
+## Features
 
-<p align="center">
-  <img src="docs/img/in-game.png" alt="Two players together in a Delverium world hosted on a Lodestone server" width="860">
-</p>
-
-### 🗺️ Live world map
+### 🗺️ Live map
 Every Lodestone server has a map page you open in a browser. It draws the world from the game's own ground art, one level at a time, and redraws it as players mine and build. It marks each connected player and every teleporter, and keeps a timelapse of how the world changed.
 
 <p align="center">
   <img src="docs/img/map-v0.2.6.png" alt="A Lodestone server's live map page: the whole world drawn from the game's terrain art, two players' live positions, the teleporters and the area selector" width="860">
 </p>
 
-### 💬 In-game chat
+### 💬 Text chat
 Delverium has no chat, so Lodestone adds one. Press **T** in game to talk. Player messages, join and leave notices, server announcements and restart countdowns all land in one feed, drawn by the game's own UI in the game's own font. Admins get chat commands too: teleport a player, set the message of the day, warn everyone before a restart.
 
 <p align="center">
   <img src="docs/img/chat.png" alt="In-game chat on a Lodestone server: player messages and a server broadcast in the same feed" width="860">
+</p>
+
+### 👥 Up to 8 players
+Delverium's Steam page gives up to eight players, and the server takes no seat of its own, so all eight go to players. The most we have seen on one server at once is five.
+
+<p align="center">
+  <img src="docs/img/in-game.png" alt="Two players together in a Delverium world hosted on a Lodestone server" width="860">
+</p>
+
+### 🧭 Join by IP
+Add the server's `ip:port` in the app, pick a character and click Connect. The app puts the connection files next to your game, starts Delverium and joins the server. The app shows whether the server is up, who is online and your ping before you connect.
+
+<p align="center">
+  <img src="docs/img/app-v0.2.6-add-server.png" alt="Lodestone's Add server window with a server name, IP and port filled in" width="420">
 </p>
 
 ### 🔒 Password protection
@@ -53,7 +57,7 @@ Set a join password on the server and only players who enter it in the app get i
   <img src="docs/img/app-v0.2.6-password.png" alt="The Lodestone app asking for a server's join password before it connects" width="420">
 </p>
 
-### 🖥️ Admin console
+### 🖥️ Server console
 Enter the server's admin password in the Console tab and the app talks to the server's admin port: who is online, kick, ban, save, restart, and a broadcast into the in-game chat.
 
 <p align="center">
@@ -74,8 +78,9 @@ The Mods tab lists every plugin the selected server runs, with its version, and 
 
 ### Players
 1. Download `LodestoneSetup-latest.exe` from the [latest release](https://github.com/HumanGenome/Lodestone/releases/latest/download/LodestoneSetup-latest.exe).
-2. Run it. One install per PC. The app updates itself from then on.
-3. Open Lodestone, add the server address, pick a character, click Connect.
+2. Run it. If Windows shows "Windows protected your PC", choose More info, then Run anyway. One install per PC; the app updates itself from then on.
+3. Open Lodestone and add the server's IP and port.
+4. Pick a character and click Connect.
 
 ### Self-hosted servers
 Requirements, ports, setup, the live map page, the admin API and the chat commands are in [LodestoneServer](https://github.com/HumanGenome/LodestoneServer). For hosts the server also has Source RCON, a signed HTTP API, a live roster file for panels and bots, a ban list and an allow list that survive restarts, a Source A2S answer on the port above the gameplay port, and a boot report that says in plain words why a server did not start. You need a Windows machine and a copy of Delverium's game files on it from your own Steam copy; the server package ships no part of the game.
@@ -108,6 +113,9 @@ Delverium's Online menu lists your Steam friends. On a PC with Lodestone install
 
 ### Can a world move between servers?
 Yes. The world save is a plain file on the server: stop both servers and copy it across.
+
+### Why does Windows warn about the installer?
+The installer is not code-signed, so Windows SmartScreen may show "Windows protected your PC". Choose More info, then Run anyway. You can check the file against the release's `checksums.txt`.
 
 ### Is this official?
 No. Lodestone is an independent project. Sagestone Games does not ship dedicated servers for Delverium.
