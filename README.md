@@ -64,6 +64,13 @@ Enter the server's admin password in the Console tab and the app talks to the se
   <img src="docs/img/app-v0.2.6-console.png" alt="The Lodestone app's Console tab connected to a server, after the players and status commands" width="860">
 </p>
 
+### 💾 World backups
+The World window backs up the running world, downloads a backup and puts one back. It can also bring in a world from your own single-player game: the server backs up the world it was running and loads yours on its next start. Like the Console tab, it needs the server's admin password.
+
+<p align="center">
+  <img src="docs/img/app-v0.2.7-world.png" alt="The Lodestone app's World window for a server: the saved admin password, one backup in the list, and the Back up now, Download, Restore and Choose a world buttons" width="420">
+</p>
+
 ### 🧩 Mods
 The Mods tab lists every plugin the selected server runs, with its version, and marks Lodestone's own parts apart from other server mods.
 
@@ -112,7 +119,7 @@ On your PC, where Delverium keeps it. The server holds the world.
 Delverium's Online menu lists your Steam friends. On a PC with Lodestone installed, the server you last connected to appears in that menu as well.
 
 ### Can a world move between servers?
-Yes. The world save is a plain file on the server: stop both servers and copy it across.
+Yes. Download a backup in the app's World window, then pick that zip with **Choose a world** on the other server. The world save is also a plain file on the server: stop both servers and copy it across.
 
 ### Why does Windows warn about the installer?
 The installer is not code-signed, so Windows SmartScreen may show "Windows protected your PC". Choose More info, then Run anyway. You can check the file against the release's `checksums.txt`.
