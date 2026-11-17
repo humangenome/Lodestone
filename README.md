@@ -109,7 +109,7 @@ On your PC, where Delverium keeps it, so you can bring any of your characters to
 Delverium's Online menu lists your Steam friends. On a PC with Lodestone installed, the server you last connected to appears in that menu as well.
 
 ### Can a world move between servers?
-Yes. Download a backup in the app's World backups window, then pick that zip with **Choose a world** on the other server. The world save is also a plain file on the server: stop both servers and copy it across.
+Yes. In the app's World backups window, pick the old server under **Copy a world from another server** and click **Copy latest backup**. The world save is also a plain file on the server: stop both servers and copy it across.
 
 ### Why does Windows warn about the installer?
 Windows shows "Windows protected your PC" for new apps it doesn't know yet. Choose More info, then Run anyway. You can check the file against the release's `checksums.txt`.
