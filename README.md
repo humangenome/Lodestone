@@ -82,6 +82,8 @@ The World backups window backs up the running world, downloads a backup and rest
 3. Open Lodestone and add the server's IP and port.
 4. Pick a character and click Connect.
 
+If Windows says Smart App Control blocked the installer, wait a day or two for Windows to recognize the new version and run it again, or turn Smart App Control off in Windows Security under App & browser control.
+
 ### Host your own
 You need a Windows PC and Delverium's game files from your own Steam copy. The server download doesn't include the game. Setup, ports, RCON, the whitelist and the chat commands are in [LodestoneServer](https://github.com/HumanGenome/LodestoneServer).
 
