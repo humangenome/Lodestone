@@ -84,6 +84,8 @@ The World backups window backs up the running world, downloads a backup and rest
 
 If Windows says Smart App Control blocked the installer, wait a day or two for Windows to recognize the new version and run it again, or turn Smart App Control off in Windows Security under App & browser control.
 
+If the app closes to update and then won't open, download the installer from our website and run it again.
+
 ### Host your own
 You need a Windows PC and Delverium's game files from your own Steam copy. The server download doesn't include the game. Setup, ports, RCON, the whitelist and the chat commands are in [LodestoneServer](https://github.com/HumanGenome/LodestoneServer).
 
